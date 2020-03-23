@@ -7,7 +7,7 @@ app.get("/delete/:id", (req,res)=> {
     Item
         .findByIdAndDelete(req.params.id)
         .then((itemID)=> {
-            res.redirect("/items")
+            res.redirect("/itemsadmin")
         })
         .catch(err=> {
             console.log("Err", err)

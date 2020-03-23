@@ -30,6 +30,10 @@ app.use("/", require("./routes/index"));
 app.use("/", require("./routes/items"));
 app.use("/", require("./routes/itemdetail"));
 app.use("/", require("./routes/itemsadmin"));
+app.use("/", require("./routes/delete"));
+app.use("/", require("./routes/createItem"));
+
+
 
 
 //connect to server

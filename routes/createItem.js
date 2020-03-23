@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const Recipe = require("../models/item");
+const Item = require("../models/fitness");
 
 
 app.get("/createItem", (req,res)=> {
@@ -9,10 +9,10 @@ app.get("/createItem", (req,res)=> {
 
 app.post("/createItem", (req,res)=> {
     console.log(req.body);
-    Recipe
+    Item
         .create({
             title: req.body.title,
-            cuisine: req.body.cuisine,
+            image: req.body.image,
             dishType: req.body.dishType,
             creator: req.body.creator,
             duration: req.body.duration,
