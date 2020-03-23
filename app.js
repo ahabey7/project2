@@ -29,14 +29,16 @@ mongoose.connect('mongodb://localhost/fitness-app-dev', {
 app.use("/", require("./routes/index"));
 app.use("/", require("./routes/items"));
 app.use("/", require("./routes/itemdetail"));
+app.use("/", require("./routes/itemsadmin"));
+
 
 //connect to server
 app.listen(3002, () => {
     console.log("running on port 3002")
 })
 
-  Item.insertMany(data) 
-       .then((arr) => {})
-       .catch((error) =>{
-            console.log(error);
-        })
+//   Item.insertMany(data) 
+//        .then((arr) => {})
+//        .catch((error) =>{
+//             console.log(error);
+//         })
