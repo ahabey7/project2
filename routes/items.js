@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const Item = require("../models/item");
+const Item = require("../models/fitness");
 
 app.get("/items", (req,res)=> {
     Item.find()

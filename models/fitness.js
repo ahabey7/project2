@@ -23,6 +23,6 @@ const fitnessSchema = new Schema({
   });
 
 
-const Recipe = mongoose.model("fitness", fitnessSchema)
+const Item = mongoose.model("fitness", fitnessSchema)
 
-module.exports = Recipe;
+module.exports = Item;

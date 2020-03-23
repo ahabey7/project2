@@ -4,7 +4,11 @@ app.set('view engine', 'hbs');
 const mongoose = require('mongoose');
 var hbs = require('hbs');
 const bodyParser = require('body-parser');
+
 app.use(bodyParser.urlencoded({ extended: false }))
+
+const Item = require("./models/fitness");
+const data = require('./data.js'); // Import of the data from './data.js'
 
 
 //connect to database
@@ -30,3 +34,10 @@ app.use("/", require("./routes/itemdetail"));
 app.listen(3002, () => {
     console.log("running on port 3002")
 })
+
+
+ Item.insertMany(data) 
+      .then((arr) => {})
+      .catch((error) =>{
+          console.log(error);
+      })

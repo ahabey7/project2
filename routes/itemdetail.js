@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express()
-const Recipe = require("../models/item")
+const Item = require("../models/fitness")
 
 
-app.get("/recipedetail/:id", (req,res)=> {
-    Recipe
+app.get("/itemdetail/:id", (req,res)=> {
+    Item
         .findById(req.params.id)
         .then((recipeId)=> {
-            res.render("recipedetail", {recipe: recipeId});
+            res.render("itemdetail", {item: itemId});
         })
         .catch((err)=> {
             res.send("error");
