@@ -6,8 +6,8 @@ const Item = require("../models/fitness")
 app.get("/itemdetail/:id", (req,res)=> {
     Item
         .findById(req.params.id)
-        .then((recipeId)=> {
-            res.render("itemdetail", {item: itemId});
+        .then((itemId)=> {
+            res.render("itemdetail", {items: itemId});
         })
         .catch((err)=> {
             res.send("error");

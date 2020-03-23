@@ -35,9 +35,8 @@ app.listen(3002, () => {
     console.log("running on port 3002")
 })
 
-
- Item.insertMany(data) 
-      .then((arr) => {})
-      .catch((error) =>{
-          console.log(error);
-      })
+//  Item.insertMany(data) 
+//       .then((arr) => {})
+//       .catch((error) =>{
+//            console.log(error);
+//        })

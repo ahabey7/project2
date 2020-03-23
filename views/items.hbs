@@ -2,12 +2,12 @@
 
 {{#each items}}
 <h2>{{title}}</h2>
-<h2>{{cuisine}}</h2>
+<h2>Price:{{price}}</h2>
 <div class="links">
-<a href="/recipedetail/{{_id}}">go to detail page</a><br>
-<a href="/delete/{{_id}}">delete Recipe</a>
+<!--<a href="/delete/{{_id}}">delete Item</a> -->
 </div>
 <img src="{{image}}">
+<a href="/itemdetail/{{_id}}">go to detail page</a><br>
 
 
 {{/each}}
