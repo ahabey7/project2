@@ -1,0 +1,30 @@
+/* nav  */
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+}
+
+li a {
+    color: grey;
+}
+
+li a:hover {
+    color: red
+}
+
+#main {
+    display: flex;
+}
+
+.branding h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.mainmenu {
+    display: flex;
+    justify-content: flex-end;
+}

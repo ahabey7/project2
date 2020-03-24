@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.418);
+}
+
+
+/* Section 1 Shop now*/
+
+.section1 {
+    display: block;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+#signIn {}
+
+
+/* #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+} */
+
+
+/* Section 2 About us */
+
+.section2 {
+    background-color: rgb(77, 70, 83);
+    display: block;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+
+/* Section 3 Testimonials */
+
+.section3 {
+    background-color: rgb(167, 161, 172);
+    display: block;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+
+/* Section 4 Bottom part */
+
+.bottom {
+    background-color: rgb(54, 53, 58);
+    box-sizing: border-box;
+    font-size: small;
+    padding: 25px 150px;
+}

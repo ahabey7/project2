@@ -1,13 +1,48 @@
-<h1> LIST OF ITEMS</h1>
-
-{{#each items}}
-<h2>{{title}}</h2>
-<h2>Price:{{price}}</h2>
-<div class="links">
-<!--<a href="/delete/{{_id}}">delete Item</a> -->
+<div class="itemSection1">
+    <img src="/images/alora-griffiths-aVrZMPgN_Vg-unsplash.jpg" alt="Woman-with-barbell">
 </div>
-<img src="{{image}}">
-<a href="/itemdetail/{{_id}}">go to detail page</a><br>
+<div class="itemSection2">
+     <div class="itemMenu">
+         <h3>Shop</h3>
+      <a href="#">Equipment</a>
+      <a href="#">Apparel</a>
+      <a href="#">Accessories</a>
+     </div>
+    
+<div class="col-lg-4 col-md-6 mb-4">
+     {{#each items}}
+        <div class="card h-100">
+              <img src="{{image}}">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <h2>{{title}}</h2>
+                </h4>
+                <h2>Price:{{price}}</h2>
+                <a href="/itemdetail/{{_id}}">go to detail page</a><br>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+            {{/each}}
+        </div>
+</div>
 
 
-{{/each}}
+
+{{!-- <div class="itemParts">
+        {{#each items}}
+            <h2>{{title}}</h2>
+            <h2>Price:{{price}}</h2>
+            <div class="links">
+            <!--<a href="/delete/{{_id}}">delete Item</a> -->
+            </div>
+            <img src="{{image}}">
+            <a href="/itemdetail/{{_id}}">go to detail page</a><br>
+        {{/each}}
+    </div> --}}
+
+
+
+
+

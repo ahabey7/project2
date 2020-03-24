@@ -23,7 +23,8 @@ mongoose.connect('mongodb://localhost/fitness-app-dev', {
         console.log("error db", error)
     })
 
-    hbs.registerPartials(__dirname + '/views/partials');
+app.use(express.static(__dirname + '/public'));
+hbs.registerPartials(__dirname + '/views/partials');
 
 //middelware
 app.use("/", require("./routes/index"));
@@ -32,17 +33,18 @@ app.use("/", require("./routes/itemdetail"));
 app.use("/", require("./routes/itemsadmin"));
 app.use("/", require("./routes/delete"));
 app.use("/", require("./routes/create"));
+app.use("/", require("./routes/edit"));
 
 
 
 
 //connect to server
-app.listen(3002, () => {
-    console.log("running on port 3002")
+app.listen(3003, () => {
+    console.log("running on port 3003")
 })
 
-//   Item.insertMany(data) 
-//        .then((arr) => {})
-//        .catch((error) =>{
-//             console.log(error);
-//         })
+// Item.insertMany(data)
+//     .then((arr) => {})
+//     .catch((error) => {
+//         console.log(error);
+//     })
