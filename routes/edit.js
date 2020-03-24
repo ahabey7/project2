@@ -13,7 +13,7 @@ app.post('/edit/:id', (req, res)=>{
             description:req.body.description
         })
         .then(item=>{
-            res.redirect('/itemsadmin' )
+            res.redirect('/itemdetail/' + req.params.id)
         })
         .catch(err=>console.log(err))
 })

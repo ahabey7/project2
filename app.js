@@ -32,6 +32,8 @@ app.use("/", require("./routes/itemdetail"));
 app.use("/", require("./routes/itemsadmin"));
 app.use("/", require("./routes/delete"));
 app.use("/", require("./routes/create"));
+app.use("/", require("./routes/edit"));
+
 
 
 
