@@ -7,6 +7,13 @@
 
 <img src="{{image}}">
 <a href="/itemdetail/{{_id}}">go to detail page</a><br>
-
+<div>
+    <form class='update-form' action="/edit/{{_id}}" method='POST'>
+        Title:<br><input type="text" name="title" value="{{title}}"> <br>
+        Price:<br><input type="text" name="cuisine" value="{{price}}"> <br>
+        Description:<br><input type="text" name="creator" value="{{description}}"> <br>
+        <button type="submit">Edit Item</button>
+    </form>
+</div>
 
 {{/each}}
