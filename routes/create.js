@@ -3,20 +3,18 @@ const app = express();
 const Item = require("../models/fitness");
 
 
-app.get("/createItem", (req,res)=> {
-    res.render("createITem");
+app.get("/create", (req,res)=> {
+    res.render("create");
 })
 
-app.post("/createItem", (req,res)=> {
+app.post("/create", (req,res)=> {
     console.log(req.body);
     Item
         .create({
             title: req.body.title,
             image: req.body.image,
-            dishType: req.body.dishType,
-            creator: req.body.creator,
-            duration: req.body.duration,
-            level: req.body.level
+            price: req.body.price,
+            description: req.body.description
             
         })
         .then((item)=> {

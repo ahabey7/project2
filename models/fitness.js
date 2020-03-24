@@ -8,7 +8,7 @@ const fitnessSchema = new Schema({
       },
       image:{
         type:String,
-        default:'https://images.media-allrecipes.com/images/75131.jpg'
+        default:'https://cdn.pixabay.com/photo/2014/06/18/18/42/running-shoe-371625__480.jpg'
       },
       created:{
         type:Date,
