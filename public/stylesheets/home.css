@@ -7,31 +7,29 @@ body {
 
 /* Section 1 Shop now*/
 
-.section1 {
-    display: block;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 40px;
+#signIn {
+    position: absolute;
 }
 
-#signIn {}
+.section1 {
+    width: 100%;
+}
 
-
-/* #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
+#myVideo {
     min-width: 100%;
     min-height: 100%;
-} */
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
 
 
 /* Section 2 About us */
 
 .section2 {
-    background-color: rgb(77, 70, 83);
+    background-color: rgba(77, 70, 83, 0.363);
     display: block;
     height: 80vh;
     display: flex;
@@ -41,23 +39,23 @@ body {
 }
 
 
-/* Section 3 Testimonials */
+/* Section 3 Carousel */
 
-.section3 {
-    background-color: rgb(167, 161, 172);
-    display: block;
+.carousel-img {
+    width: 100%;
     height: 80vh;
-    display: flex;
+}
+
+#carousel {
+    background-color: #e5dfdf;
     justify-content: center;
-    align-items: center;
-    padding: 0 40px;
 }
 
 
 /* Section 4 Bottom part */
 
 .bottom {
-    background-color: rgb(54, 53, 58);
+    background-color: rgb(77, 70, 83, 0.363);
     box-sizing: border-box;
     font-size: small;
     padding: 25px 150px;
