@@ -9,7 +9,7 @@
       <a href="#">Accessories</a>
      </div>
     
-<div class="col-lg-4 col-md-6 mb-4">
+<div class="col-lg-4 col-md-6 mb-4 col-sm-6" id="itemsDisplayed">
      {{#each items}}
         <div class="card h-100">
               <img src="{{image}}">
@@ -18,7 +18,7 @@
                   <h2>{{title}}</h2>
                 </h4>
                 <h2>Price:{{price}}</h2>
-                <a href="/itemdetail/{{_id}}">go to detail page</a><br>
+                <a href="/itemdetail/{{_id}}">More...</a><br>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>

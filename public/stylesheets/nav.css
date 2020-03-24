@@ -19,9 +19,11 @@ li a:hover {
     display: flex;
 }
 
-.branding h1 {
+.branding h1 a {
     font-weight: bold;
     text-align: center;
+    text-decoration: none;
+    color: grey;
 }
 
 .mainmenu {

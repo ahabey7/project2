@@ -1,6 +1,18 @@
-<h1>DETAILS OF PRODUCT: {{items.title}}</h1>
-<p>Here is a description of the product: {{items.description}}</p><br>
-<img src="{{items.image}}">
-<p>This item's Price is: {{items.price}}€</p><br>
+<div class="itemSection1">
+    <img src="/images/chase-kinney-FMQBLyhD2HU-unsplash.jpg" alt="battlerope picture">
+</div>
 
-<a href="/items">go back to Shop</a>
+<div id="containerDetail">
+        <div class="intoDetail">
+              <img src="{{items.image}}">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <h3>{{items.title}}</h3>
+                </h4>
+                <p>Product description: {{items.description}}</p><br>
+                <p>€ {{items.price}},-</p>
+                <a href="/items">Back to Shop</a>
+              </div>
+            </div>
+        </div>
+</div>

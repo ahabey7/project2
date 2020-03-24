@@ -34,10 +34,6 @@ app.use("/", require("./routes/itemsadmin"));
 app.use("/", require("./routes/delete"));
 app.use("/", require("./routes/create"));
 app.use("/", require("./routes/edit"));
-<<<<<<< HEAD
-=======
-
->>>>>>> 7f9c144ba6aaf46b4bb17dbe05db03bec1ad67f6
 
 
 
