@@ -4,6 +4,10 @@ app.set('view engine', 'hbs');
 const mongoose = require('mongoose');
 var hbs = require('hbs');
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
+
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -34,9 +38,28 @@ app.use("/", require("./routes/itemsadmin"));
 app.use("/", require("./routes/delete"));
 app.use("/", require("./routes/create"));
 app.use("/", require("./routes/edit"));
-app.use("/", require("./routes/login"));
+app.use("/", require("./routes/user/signup"));
+app.use("/", require("./routes/user/login"));
 
 
+//Create middleware to enable session
+app.use(session({
+    secret: "basic-auth-secret",
+    cookie: { maxAge: 60000 },
+    store: new MongoStore({
+        mongooseConnection: mongoose.connection,
+        ttl: 24 * 60 * 60 // 1 day
+    })
+}));
+
+//   app.use((req,res,next)=>{
+//     if(req.session.user){
+//       app.locals.user = req.session.user
+//     } else if(app.locals.user) {
+//       delete app.locals.user
+//     }
+//     next();
+//   })
 
 
 //connect to server
