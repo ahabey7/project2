@@ -8,9 +8,5 @@ module.exports = mongoose.model("users", {
     password:   String,
     firstName:  String,
     lastName:   String,
-    admin:    {
-                 type:Boolean,
-                 default:false
-              }
 
 });

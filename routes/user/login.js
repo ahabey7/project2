@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const User = require("../../models/user");
 const bcrypt = require('bcrypt');
-const session    = require("express-session");
 
 
 app.get("/user/login", (req,res)=> {
@@ -10,7 +9,7 @@ app.get("/user/login", (req,res)=> {
 })
 
 app.post("/user/login", (req,res,next)=> {
-    const {username, password} = req.body;
+    const {username, password, firstName, lastName,admin} = req.body;
     User.findOne({
         username 
     })
@@ -21,8 +20,9 @@ app.post("/user/login", (req,res,next)=> {
                 if(err) next("hash compare error");
                 else if(!correctPassword) res.send("invalid credentials.");
                 else {
-                    req.session.user = user;
-                    res.redirect("/items");
+                    req.session.currentUser = user;
+                    res.redirect("/itemsadmin");
+                    
                 }
             });
         }

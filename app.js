@@ -30,6 +30,24 @@ mongoose.connect('mongodb://localhost/fitness-app-dev', {
 app.use(express.static(__dirname + '/public'));
 hbs.registerPartials(__dirname + '/views/partials');
 
+//Create middleware to enable session
+ app.use(session({
+     secret: "basic-auth-secret",
+     cookie: { maxAge: 60000 },
+     store: new MongoStore({
+       mongooseConnection: mongoose.connection,
+       ttl: 24 * 60 * 60 // 1 day
+     })
+   }));
+
+//    app.use((req,res,next)=>{
+//     if(req.session.user){
+//       app.locals.user = req.session.user
+//     } else if(app.locals.user) {
+//       delete app.locals.user
+//     }     next();
+//   })  
+
 //middelware
 app.use("/", require("./routes/index"));
 app.use("/", require("./routes/items"));
@@ -42,29 +60,14 @@ app.use("/", require("./routes/user/signup"));
 app.use("/", require("./routes/user/login"));
 
 
-//Create middleware to enable session
-app.use(session({
-    secret: "basic-auth-secret",
-    cookie: { maxAge: 60000 },
-    store: new MongoStore({
-      mongooseConnection: mongoose.connection,
-      ttl: 24 * 60 * 60 // 1 day
-    })
-  }));
 
-//   app.use((req,res,next)=>{
-//     if(req.session.user){
-//       app.locals.user = req.session.user
-//     } else if(app.locals.user) {
-//       delete app.locals.user
-//     }
-//     next();
-//   })
+
+
 
 
 //connect to server
-app.listen(3003, () => {
-    console.log("running on port 3003")
+app.listen(3002, () => {
+    console.log("running on port 3002")
 })
 
 // Item.insertMany(data)
