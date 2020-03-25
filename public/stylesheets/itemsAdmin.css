@@ -1,0 +1,58 @@
+/* ITEMS ADMIN PAGE */
+
+.admin {
+    display: flex;
+    justify-content: center;
+}
+
+.admin h3 {
+    color: rgb(77, 70, 83, 0.363);
+}
+
+.divBtn {
+    display: flex;
+    justify-content: center;
+}
+
+#itemsDisplayedAdmin {
+    display: flex;
+    flex-direction: row;
+    background-clip: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    width: 30%;
+    margin: 10px 5px;
+    padding: 1%;
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+}
+
+
+/* CREAT ITEMS PAGE */
+
+.createContainer {
+    height: 80vh;
+    background-color: rgb(77, 70, 83, 0.363);
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    align-items: center;
+    border-radius: 0.25;
+}
