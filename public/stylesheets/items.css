@@ -1,6 +1,6 @@
 img {
-    width: 50%;
-    height: 50%;
+    width: 150px;
+    height: 150px;
 }
 
 .itemSection1 {
@@ -53,8 +53,8 @@ img {
 }
 
 .card {
-    position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     min-width: 0;
@@ -65,10 +65,12 @@ img {
     border-radius: 0.25rem;
     width: 30%;
     margin: 10px 5px;
+    padding: 1%;
+    text-align: center;
 }
 
 .card-title {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 
