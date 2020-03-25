@@ -13,9 +13,9 @@ module.exports = [{
     {
 
         title: 'Dumbells',
-        image: 'https://toppng.com/uploads/preview/red-dumbbells-11548793835hkjjdxoejr.png',
+        image: 'https://www.rogueeurope.eu/media/catalog/product/cache/5/rogue_header_2015/1536x/472321edac810f9b2465a359d8cdc0b5/x/x/xx7447-lg_1.jpg',
         price: 100,
-        description: 'Contoured handles are designed for easy and safe handling practice '
+        description: 'Rogues KG Rubber Hex Dumbbells are available in weights ranging from 2.5kg up to 60kg. The easy-grip handle measures 25mm in diameter for dumbbells weighing 2.5 - 5kg, and 35mm for dumbbells weighing 7.5 - 60kg.'
     },
     {
         title: 'Yoga ball',
@@ -36,10 +36,22 @@ module.exports = [{
         description: 'This gym mat is toxic-free, non-slip, waterproof, crack-resistant, which is healthy and safe for your family and easier to clean.  '
     },
     {
-        title: 'Resistance Bands',
-        image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.aliexpress.com%2Fi%2F32946112951.html&psig=AOvVaw1pzo71c7xskdb3SVaSviJb&ust=1585057086751000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNClv_nbsOgCFQAAAAAdAAAAABAJ',
+        title: 'ROGUE MONSTER BANDS',
+        image: 'https://www.rogueeurope.eu/media/catalog/product/cache/5/rogue_header_2015/1536x/472321edac810f9b2465a359d8cdc0b5/x/x/xx1731-lg_2.jpg',
         price: 25,
-        description: 'This exercise bands are awesome!  '
+        description: 'Available to order individually, in pairs, or as part of a full set, Rogue Monster Bands are the versatile, go-anywhere accessory for customized resistance training—from mobility work and pull-up assistance to banded squats and bench presses. There are (8) color-coded versions of the natural latex rubber stretch bands to choose from, each measuring 41" in length, but varying in width, thickness, and overall resistance. This makes each band more specialized for certain types of training.'
+    },
+    {
+        title: 'Concept 2 Rower',
+        image: 'https://www.fitness24.nl/upload/huge/concept2_zwart-1.JPG',
+        price: 1025,
+        description: 'The dependable performance of our Model D RowErg has made it the best selling indoor rower in the world. Recognized by competitive rowers as the standard for indoor training, the Model D delivers an effective cardiovascular workout that will increase your fitness level and tone your physique. At a fraction of the cost of other home fitness equipment or a yearly gym membership, you can have the luxury of working out in your home whenever you choose…and get a great workout to boot.'
+    },
+    {
+        title: 'ROGUE ECHO DOG SLED',
+        image: 'https://www.rogueeurope.eu/media/catalog/product/cache/5/image/1500x1500/472321edac810f9b2465a359d8cdc0b5/r/o/rogue-echo-sled-web2_1_2.jpg',
+        price: 125,
+        description: 'The Echo Dog Sled adapts the push/pull versatility and quality steel construction of our standard Dog Sled into a more streamlined, budget-priced design. By cutting the base from a single 0.25" Plate Steel and reducing welds and scrap, we’ve built a maximum-efficiency weight sled that’s still equipped for intense, multi-surface training.'
     },
 
 

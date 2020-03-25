@@ -1,6 +1,6 @@
 img {
-    width: 30vw;
-    height: 40vh;
+    width: 50%;
+    height: 50%;
 }
 
 .itemSection1 {
@@ -43,11 +43,19 @@ img {
 
 /* CARD */
 
+#itemsDisplayed {
+    display: flex;
+    flex-direction: row;
+    background-clip: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
 .card {
     position: relative;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
+    justify-content: center;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
@@ -55,25 +63,12 @@ img {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
+    width: 30%;
+    margin: 10px 5px;
 }
-
-.itemsDisplayed {
-    flex-direction: row;
-}
-
-
-/* .card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1.25rem;
-} */
 
 .card-title {
     margin-bottom: 0.75rem;
-}
-
-.h-100 {
-    height: 75vh !important;
 }
 
 
