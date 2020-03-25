@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 var hbs = require('hbs');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
-const session    = require("express-session");
+const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 
 
@@ -60,6 +60,15 @@ app.use("/", require("./routes/user/signup"));
 app.use("/", require("./routes/user/login"));
 
 
+//Create middleware to enable session
+app.use(session({
+    secret: "basic-auth-secret",
+    cookie: { maxAge: 60000 },
+    store: new MongoStore({
+        mongooseConnection: mongoose.connection,
+        ttl: 24 * 60 * 60 // 1 day
+    })
+}));
 
 
 
