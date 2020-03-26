@@ -7,6 +7,13 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
+require('dotenv').config()
+var db = require('db/db');
+db.connect({
+    host: process.env.DB_HOST,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS
+})
 
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -80,8 +87,8 @@ app.listen(3002, () => {
     console.log("running on port 3002")
 })
 
-//  Item.insertMany(data)
-//      .then((arr) => {})
-//      .catch((error) => {
-//          console.log(error);
-//      })
+// Item.insertMany(data)
+//     .then((arr) => {})
+//     .catch((error) => {
+//         console.log(error);
+//     })
