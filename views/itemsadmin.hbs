@@ -1,22 +1,37 @@
 <h1> LIST OF ITEMS</h1>
-<a href="/user/logout">Logout</a>
-<a href="/create">Create new Item</a>
 
-
-{{#each items}}
-<h2>{{title}}</h2>
-<h2>Price:{{price}}</h2>
-<a href="/delete/{{_id}}">delete Item</a>
-
-<img src="{{image}}">
-<a href="/itemdetail/{{_id}}">go to detail page</a><br>
-<div>
-    <form class='update-form' action="/edit/{{_id}}" method='POST'>
-        Title:<br><input type="text" name="title" value="{{title}}"> <br>
-        Price:<br><input type="text" name="price" value="{{price}}"> <br>
-        Description:<br><input type="text" name="description" value="{{description}}"> <br>
-        <button type="submit">Edit Item</button>
-    </form>
+<div class="admin">
+    <h3><u>Admin Logged In</u></h3>
 </div>
 
-{{/each}}
+<div class="divBtn">
+    <a class="btn btn-outline-primary btn-lg" href="/create" role="button">Create</a>
+</div>
+
+<div id="itemsDisplayedAdmin">
+    {{#each items}}
+    <div class="card">
+        <img src="{{image}}">
+        <div class="card-body">
+                <h4 class="card-title">
+                  <h2>{{title}}</h2>
+                </h4>
+                <h2>Price:{{price}}</h2>
+               <a href="/delete/{{_id}}">delete Item</a>
+              </div>
+                <div>
+                    <form class='update-form' action="/edit/{{_id}}" method='POST'>
+                    Title:<br><input type="text" name="title" value="{{title}}"> <br>
+                    Price:<br><input type="text" name="price" value="{{price}}"> <br>
+                    Description:<br><textarea type="text" name="description" value="{{description}}"></textarea> <br>
+                    <button type="submit">Edit Item</button>
+                    </form>
+                </div>
+        </div>
+    {{/each}}
+</div>
+
+<div class="divBtn">
+    <a class="btn btn-outline-danger btn-lg" href="/user/logout" role="button">Logout</a>
+</div>
+    
