@@ -6,8 +6,11 @@
 
         <input type="text" class="form-control top " name="username" placeholder="username" required autofocus>
         <input type="password" class="form-control bottom" name="password" placeholder="password" required>
-
+        
         <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
         <p class="mt-5 mb-3 text-muted">&copy; BWST</p>
     </form>
 </div>
+{{#if errorMessage}}
+  <div class="error-message">{{ errorMessage }}</div>
+{{/if}}

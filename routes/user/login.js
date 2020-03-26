@@ -14,11 +14,12 @@ app.post("/user/login", (req, res, next) => {
             username
         })
         .then((user) => {
-            if (!user) res.send("invalid credentials.")
+ 
+            if (!user) res.send("No such user")
             else {
                 bcrypt.compare(password, user.password, function(err, correctPassword) {
                     if (err) next("hash compare error");
-                    else if (!correctPassword) res.send("invalid credentials.");
+                    else if (!correctPassword) res.send("Wrong password");
                     else {
                         req.session.currentUser = user;
                         res.redirect("/itemsadmin");
