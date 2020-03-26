@@ -2,10 +2,20 @@
     <h3>Creat a new item</h3>
 </div>
 <div class="createContainer">
+    <div class="createContent">
     <form action="/create" method="POST">
-        <input type="text" name="title" placeholder="title"><br>
-        <input type="number" name="price" placeholder="price"><br>
-        <textarea name="description" placeholder="Description of item .." style="height:200px"></textarea><br>
-        <a class="btn btn-primary btn-lg" href="/create" type="submit">Create item</a>
+        <input type="text" name="title" style="width:200px" placeholder="title"><br>
+        <input type="number" name="price" style="width:200px" placeholder="price"><br>
+        <textarea name="description" placeholder="Description of item .."style="width:200px"></textarea><br>
+        <form class="imgInput"action="/">
+            <label for="img">Upload image from folder:</label><br>
+            <input type="file" id="img" name="image" accept="image/*">
+            <input type="submit">
+            <br>
+            <label for="img">Url link to img:</label><br>
+            <input type="url" id="img" name="image" accept="image/*">
+            <input type="submit">
+        </form>
     </form>
+    </div>
 </div>
