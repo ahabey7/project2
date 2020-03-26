@@ -14,6 +14,10 @@ const fitnessSchema = new Schema({
         type:Date,
         default:Date.now
       },
+      category:{
+        type:String,
+        enum:["Equipment", "Apparel", "Accessories"]
+      },
       price:{
           type:Number
       },
