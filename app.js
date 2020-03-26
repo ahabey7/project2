@@ -58,6 +58,8 @@ app.use("/", require("./routes/create"));
 app.use("/", require("./routes/edit"));
 app.use("/", require("./routes/user/signup"));
 app.use("/", require("./routes/user/login"));
+app.use("/", require("./routes/user/logout"));
+
 
 
 //Create middleware to enable session
