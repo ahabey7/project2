@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
-const Item = require("../models/fitness");
+const Item = require("../../models/fitness");
 
-app.get("/items", (req,res)=> {
-    Item.find()
+app.get("/equipment", (req,res)=> {
+    Item.find({category: "Equipment"})
         .then((itemData)=> {
-            res.render("items", {items:itemData});
+            res.render("equipment", {items:itemData});
         })
         .catch((err)=> {
             res.render("error", err);

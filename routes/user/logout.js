@@ -10,3 +10,7 @@ app.get("/user/logout", (req, res, next) => {
         res.redirect("/user/login");
     });
 });
+
+
+
+module.exports = app;

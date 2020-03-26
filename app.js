@@ -43,7 +43,7 @@ app.use(session({
 
 //middelware
 app.use("/", require("./routes/index"));
-app.use("/", require("./routes/items"));
+app.use("/", require("./routes/shop/items"));
 app.use("/", require("./routes/itemdetail"));
 app.use("/", require("./routes/itemsadmin"));
 app.use("/", require("./routes/delete"));
@@ -51,6 +51,14 @@ app.use("/", require("./routes/create"));
 app.use("/", require("./routes/edit"));
 app.use("/", require("./routes/user/signup"));
 app.use("/", require("./routes/user/login"));
+app.use("/", require("./routes/user/logout"));
+app.use("/", require("./routes/shop/equipment"));
+app.use("/", require("./routes/shop/apparel"));
+app.use("/", require("./routes/shop/accessories"));
+
+
+
+
 
 
 //Create middleware to enable session
@@ -72,8 +80,8 @@ app.listen(3002, () => {
     console.log("running on port 3002")
 })
 
-// Item.insertMany(data)
-//     .then((arr) => {})
-//     .catch((error) => {
-//         console.log(error);
-//     })
+//  Item.insertMany(data)
+//      .then((arr) => {})
+//      .catch((error) => {
+//          console.log(error);
+//      })

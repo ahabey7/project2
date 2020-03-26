@@ -44,3 +44,12 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.error-message {
+    background: #F02B63;
+    box-sizing: border-box;
+    color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+  }
