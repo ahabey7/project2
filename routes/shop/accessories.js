@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const Item = require("../../models/fitness");
 
-app.get("/accessories", (req,res)=> {
+app.get("/shop/accessories", (req,res)=> {
     Item.find({category: "Accessories"})
         .then((itemData)=> {
             res.render("accessories", {items:itemData});
