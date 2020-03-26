@@ -52,7 +52,12 @@
     background-color: rgb(77, 70, 83, 0.363);
     display: flex;
     justify-content: center;
-    padding: 1%;
+}
+
+.createContent {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border-radius: 0.25;
+    flex-direction: column;
+    text-align: center;
 }

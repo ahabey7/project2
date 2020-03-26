@@ -4,9 +4,9 @@ const User = require("../../models/user");
 const bcrypt = require('bcrypt');
 
 
-app.get("/logout", (req, res, next) => {
+app.get("/user/logout", (req, res, next) => {
     req.session.destroy((err) => {
-      // cannot access session here
-      res.redirect("/user/login");
+        // cannot access session here
+        res.redirect("/user/login");
     });
-  });
+});
